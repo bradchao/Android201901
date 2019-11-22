@@ -8,5 +8,13 @@
     brad:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        brad:layout_width="match_parent"
+        brad:layout_height="wrap_content"
+        brad:text="Hello, World"
+        brad:gravity="center_horizontal"
+        brad:textSize="24sp"
+        brad:textStyle="bold"
+        />
 
 </LinearLayout>
