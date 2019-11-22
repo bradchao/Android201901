@@ -18,10 +18,10 @@
         brad:textStyle="bold"
         />
     <Button
-        brad:id="@+id/click"
         brad:layout_width="match_parent"
         brad:layout_height="wrap_content"
         brad:text="Click"
         brad:textAllCaps="false"
+        brad:onClick="createLottery"
         />
 </LinearLayout>

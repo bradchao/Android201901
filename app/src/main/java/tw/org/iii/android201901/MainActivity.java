@@ -13,7 +13,6 @@ import java.util.TreeSet;
 
 public class MainActivity extends AppCompatActivity {
     private TextView lottery;
-    private Button click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         lottery = findViewById(R.id.lottery);
-        click = findViewById(R.id.click);
-        click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                createLottery();
-            }
-        });
     }
 
-    private void createLottery(){
+    public void createLottery(View view){
         TreeSet<Integer> set = new TreeSet<>();
         while (set.size() < 6){
             set.add((int)(Math.random()*49+1));
