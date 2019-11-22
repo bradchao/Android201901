@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.HashSet;
+import java.util.TreeSet;
+
 public class MainActivity extends AppCompatActivity {
     private TextView lottery;
     private Button click;
@@ -22,9 +25,18 @@ public class MainActivity extends AppCompatActivity {
         click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v("brad", "click");
+                createLottery();
             }
         });
-
     }
+
+    private void createLottery(){
+        TreeSet<Integer> set = new TreeSet<>();
+        while (set.size() < 6){
+            set.add((int)(Math.random()*49+1));
+        }
+        lottery.setText(set.toString());
+    }
+
+
 }
